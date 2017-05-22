@@ -25,7 +25,7 @@ fun todoTask7(client: Client?, message: String?, mailer: Mailer): Nothing = TODO
 fun sendMessageToClient(
         client: Client?, message: String?, mailer: Mailer
 ) {
-    todoTask7(client, message, mailer)
+    JavaCode7().sendMessageToClient(client, message, mailer)
 }
 
 class Client (val personalInfo: PersonalInfo?)

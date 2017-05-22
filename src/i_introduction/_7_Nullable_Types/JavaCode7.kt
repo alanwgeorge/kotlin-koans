@@ -4,12 +4,10 @@ import util.JavaCode
 
 class JavaCode7 : JavaCode() {
     fun sendMessageToClient(client: Client?, message: String?, mailer: Mailer) {
-        if (client == null || message == null) return
+        val email = client?.personalInfo?.email
 
-        val personalInfo = client.personalInfo ?: return
-
-        val email = personalInfo.email ?: return
-
-        mailer.sendMessage(email, message)
+        if (email != null && message != null) {
+            mailer.sendMessage(email, message)
+        }
     }
 }
