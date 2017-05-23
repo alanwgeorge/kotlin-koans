@@ -16,12 +16,7 @@ fun todoTask12(): Nothing = TODO(
     documentation = doc12()
 )
 
-fun List<Int>.sortedDescending(): List<Int> {
-    return sortedWith(Comparator<Int> { o1, o2 -> o2 - o1 })
-}
-
 fun task12(): List<Int> {
-//    todoTask12()
     return arrayListOf(1, 5, 2).sortedDescending()
 }
 
