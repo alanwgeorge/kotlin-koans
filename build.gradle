@@ -18,13 +18,21 @@ sourceSets {
     test.java.srcDirs += 'test'
 }
 
+kotlin {
+    experimental {
+        coroutines 'enable'
+    }
+}
+
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile 'com.google.guava:guava:16.0'
     compile "com.google.code.gson:gson:$gson_version"
+    compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.15"
     testCompile 'junit:junit:4.12'
 }
